@@ -1,0 +1,109 @@
+<!Doctype html>
+
+	<html lang="pt-br">
+
+		<head>
+		
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE-edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta name="author" content="Ana Silva">
+			<link rel="icon" href="../img/icon.png">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+			<title>Atividade 2 - DER</title>
+			
+			<style>
+			
+			h1{color:#fff;}
+			
+			body{background-color:#bde0fe;}
+			
+			#botao img{width:25px; height:25px;}
+			#botao{padding:10px; margin:5px;}
+			#botao a{border:1px solid #A60954; padding:5px; text-decoration:none; color:#FDE8E2; border-radius:20px; background-color:#E11894;}
+			
+			</style>
+			
+		</head>
+		
+		<body>
+		
+			<div id="botao">
+				<a href="../index.html"><img src="../img/seta.png">Home</a>
+			</div>
+		
+			<div class="jumbotron text-center" style="background-color:#a2d2ff;">
+				<h1>Atividade 2 - DER</h1>
+			</div>
+			
+			<div>
+			
+				<ol>
+					<li>Defina, os seguintes conceitos:
+						<ol type="a">
+							<li>
+								Modelo Conceitual:
+								<p>É uma descrição do banco de dados de forma independente de implementação em um SGBD. O modelo conceitual registra que dados podem aparecer no banco de dados, mas não registra como estes dados estão armazenados a nível de SGBD.</p>
+							</li>
+							<li>
+								Modelo Lógico:
+								<p>É uma descrição de um banco de dados no nível de abstração visto pelo usuário do SGBD. Assim, o modelo lógico é dependente do tipo particular de SGBD que está sendo usado.</p>
+							</li> 
+							<li>
+								Modelo Organizacional:
+								<p>Uma das ideias fundamentais do projeto de banco de dados: a de que através da identificação das entidades que terão informações representadas no banco de dados, é possível os arquivos que comporão o banco de dados, ou seja: um mesmo modelo conceitual pode ser usado em duas funções: modelo abstrato da organização e modelo abstrato do banco de dados. </p>
+							</li>
+						</ol>	
+					</li>
+					<li>
+						A definição do tipo de um dado (numérico, inteiro, float, alfanumérico,…) faz parte de que modelo: do modelo conceitual, do modelo  lógico ou do modelo físico?
+						<p>Faz parte do modelo lógico.</p>
+					</li>
+					<li> 
+						Qual a diferença entre a redundância de dados controlada e a redundância de dados não controlada? Dê exemplos de  cada uma delas: 
+							<p>Na redundância de dados controlada, o software tem conhecimento dessa redundância e trabalha para manter a sincronia dos dados.<br>
+							Exemplo: Um sistema onde a mesma informação é armazenada em vários computadores.
+							Na redundância de dados não controlada, o software não sabe dessa redundância e a sincronia dos dados fica por conta do usuário;<br>
+							Exemplo: Uma empresa em que cada setor tem um arquivo separado, alimentado manualmente e que a informação de cada um deles é vital para o outro arquivo.</p>
+					</li>		
+					<li>
+						 O que é entidade? Dê exemplos.
+						 <p>Pode ser definida como qualquer coisa do mundo real , abstrata ou concreta , na qual se deseja guardar informações.<br>Exemplos de entidades : Cliente , Produto , Contrato , Vendas , etc.</p>
+					</li>
+					<li>
+						 O que é atributo? Dê exemplos.
+						 <p>É tudo o que se pode relacionar como propriedade da entidade.<br>Exemplos de atributos : Código do Produto (Entidade Produto) , Nome do Cliente (Entidade Cliente).</p>
+					</li>
+					<li>
+						 O que é relacionamento?
+						 <p>pode ser entendido como uma associação entre instâncias de Entidades devido a regras de negócio. Normalmente ocorre entre instâncias de duas ou mais Entidades, podendo ocorrer entre instâncias da mesma Entidade (auto-relacionamento).</p>
+					</li>
+					<li>
+						 O que deve compor uma entidade?
+						 <p>ENTIDADE FRACA OU DEPENDENTE<br>
+
+							Uma entidade fraca (ou dependente) precisa de outra entidade para garantir a sua existência. A entidade fraca depende de uma entidade tipo e esta relação de dependencia é uma relação obrigatória. O identificador de uma entidade fraca possui em sua composição o(s) atributo(s) identificador(es) da entidade tipo à qual a entidade fraca está associada. Como exemplo podemos considerar um sistema de gestão de recursos humanos onde a entidade dependente é uma entidade fraca em relação à entidade funcionário. Pois se a entidade Funcionários não existisse, a entidade dependentes consequentemente não existiria.<br> 
+
+							ENTIDADE ASSOCIATIVA<br>
+
+							As entidades associativas são o resultados de relacionamentos m:m. Em geral, as entidades associativas são encontradas entre entidades tipo. Muitas das vezes, as entidades associativas têm nomes óbvios, pois ocorrem no mundo real. Por exemplo, a entidade associativa do relacionamento disciplinas e alunos, objetivando o lançamento de notas, chama-se avaliação. Deve-se sempre procurar pelo nome adequado, pois esse irá aumentar a clareza do modelo de dados.
+ 
+							ENTIDADE AGREGADA<br>
+
+							Cria-se uma entidade agregada quando temos um conjunto de atriutos que aparecem em mais de uma entidade do modelo de dados. Ou seja, quando várias entidades distintas têm atributos em comum. Nestes casos devemos criar uma entidade agregada contendo os atributos que se repetem em mais de uma entidade. Por exemplo, como os atributos de um endereço podem ocorrer em entidades diferentes (CLIENTES E FORNECEDORES por exemplo), pode-se criar uma entidade agregada ENDEREÇOS para armazenar detalhes de todos os endereços.<br>
+
+							ENTIDADE SUBORDINADA<br>
+
+							Uma entidade representa uma especializacao de entidade no modelo de dados onde uma entidade supertipo possui várias entidades subordinada que são especializadas con atributos especíicos. Devemos usar entidades subordinadas toda vez que tivermos entidades que compartilham conceitos semelhantes mas que possuem características proprias. Por exemplo, podemos ter uma entidade supertipo CLIENTE contendo os atributos codigo, nome, endereco e telefone e duas entidades subordinadas PESSOA FISICA e PESSOA JURIDICA contendo atributos especificos respecitvamente nro_cpf e nro_cnpj. Tanto PESSOA FISICA como PESSOA JURIDICA compartilham conceitos semelhantes, ambas possuem um nome e endereco mas possuem também características próprias pois PESSOA FISICA possui nro_cpf e PESSOA JURIDICA possui nro_cnpj.</p>
+					</li>
+				</ol>
+			
+			</div>
+			
+			<div class="jumbotron mb-0 text-center" style="background-color:#a2d2ff;">
+				<h2>Bibliografia</h2>
+				<a href="http://www.macoratti.net/cbmd1.htm" target="_blank">Macoratti</a>
+			</div>
+		</body>
+
+	</html>

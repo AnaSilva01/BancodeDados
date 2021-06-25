@@ -1,0 +1,35 @@
+body{
+	background-color:#90e0ef;
+}
+
+#logo{
+	text-align:center;
+	margin:10% 0;
+}
+
+a{
+	font-size:20px;
+}
+
+.conteudo{
+	margin:40px;
+	display:inline-block;
+}
+.conteudo a{
+	text-decoration:none;
+	border:2px solid #fdffb6;
+	padding:10px;
+	border-radius:10px;
+	background:#fdffb6;
+	color:#fca311;
+}
+
+.conteudo a:hover{
+	background-color:white;
+	color:#00b4d8;
+}
+
+#midia {
+	width:35px;
+	height:35px;
+}
